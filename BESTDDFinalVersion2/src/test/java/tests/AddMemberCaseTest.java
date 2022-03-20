@@ -82,7 +82,7 @@ public class AddMemberCaseTest {
 			{
 				String ActualMessage = PMDScreen.gettitle();
 				Assert.assertEquals(ActualMessage,ExpectedMessage);
-				System.out.println("Test");
+				
 			}
 		 
 		
