@@ -144,7 +144,7 @@ SoftAssert softAssert = new SoftAssert();
 			File source = ((TakesScreenshot)browserObject).getScreenshotAs(OutputType.FILE);
 			
 			try {
-				FileHandler.copy(source, new File("D:\\Hossam\\Automation\\screenshots\\"+dateFormat.format(date)+".png"));
+				FileHandler.copy(source, new File("D:\\screenshots\\"+dateFormat.format(date)+".png"));
 			} catch (IOException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();

@@ -109,7 +109,7 @@ public class CustomerDetailsScreen extends Locators_Repo{
 
 		try 
 		{
-			Runtime.getRuntime().exec("D:\\Hossam\\Automation\\BESTDDFinalVersion2\\Autoit\\clickfocus.exe");
+			Runtime.getRuntime().exec("D:\\git\\HIASAuto\\BESTDDFinalVersion2\\Autoit\\clickfocus.exe");
 		}
 		catch (IOException e ) {
 			e.printStackTrace();
@@ -135,7 +135,7 @@ public class CustomerDetailsScreen extends Locators_Repo{
 
 		try 
 		{
-			Runtime.getRuntime().exec("D:\\Hossam\\Automation\\BESTDDFinalVersion2\\Autoit\\clickfocus.exe");
+			Runtime.getRuntime().exec("D:\\git\\HIASAuto\\BESTDDFinalVersion2\\Autoit\\clickfocus.exe");
 		}
 		catch (IOException e ) {
 			e.printStackTrace();
@@ -162,7 +162,7 @@ public class CustomerDetailsScreen extends Locators_Repo{
 
 		try 
 		{
-			Runtime.getRuntime().exec("D:\\Hossam\\Automation\\BESTDDFinalVersion2\\Autoit\\clickfocus.exe");
+			Runtime.getRuntime().exec("D:\\git\\HIASAuto\\BESTDDFinalVersion2\\Autoit\\clickfocus.exe");
 		}
 		catch (IOException e) {
 			e.printStackTrace();

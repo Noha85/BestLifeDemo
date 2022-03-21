@@ -121,7 +121,7 @@ public class AddRateVersion extends Locators_Repo {
 		
 		try 
 		{
-			Runtime.getRuntime().exec("D:\\Hossam\\Automation\\BESTDDFinalVersion2\\Autoit\\uploadfile1.exe");
+			Runtime.getRuntime().exec("D:\\git\\HIASAuto\\BESTDDFinalVersion2\\Autoit\\uploadfile1.exe");
 		}
 		catch (IOException e ) {
 			e.printStackTrace();

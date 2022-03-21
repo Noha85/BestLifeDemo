@@ -37,7 +37,7 @@ public class AddCustomerCase {
 	@BeforeMethod
 	  public void beforeClass() {
 		  
-		  System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
+		  System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
 		 browserObject = new ChromeDriver();
 		 browserObject .manage().window().maximize();			
 		 HIASLOGIN = new HiasLoginPage(browserObject);
@@ -121,7 +121,7 @@ public class AddCustomerCase {
 			File source = ((TakesScreenshot)browserObject).getScreenshotAs(OutputType.FILE);
 			
 			try {
-				FileHandler.copy(source, new File("D:\\Hossam\\Automation\\screenshots\\"+dateFormat.format(date)+".png")); 
+				FileHandler.copy(source, new File("D:\\screenshots\\"+dateFormat.format(date)+".png")); 
 			} catch (IOException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
