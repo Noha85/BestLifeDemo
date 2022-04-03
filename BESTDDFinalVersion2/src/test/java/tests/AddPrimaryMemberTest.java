@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import com.utility.ExcelLib;
 
-import pages.AddPrimaryMemberDetails;
+import pages.AddLifePrimaryMemberDetails;
 import pages.CustomerDetailsScreen;
 import pages.CustomerMenu;
 import pages.HiasLoginPage;
@@ -35,7 +35,7 @@ public class AddPrimaryMemberTest {
 	CustomerMenu CMenu ;
 	CustomerDetailsScreen CustDetailsScreen ;
 	PrimaryMemberMenu PMScreen ;
-	AddPrimaryMemberDetails PMDScreen ;
+	AddLifePrimaryMemberDetails PMDScreen ;
 	
 	String ActualResult = "Primary Members";
 	
@@ -43,7 +43,7 @@ public class AddPrimaryMemberTest {
 	@BeforeMethod
 	  public void beforeClass() {
 		  
-		  System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
+		  System.setProperty("webdriver.chrome.driver", "D:\\Local Disk\\Git\\HIASAuto\\BESTDDFinalVersion2\\chromedriver.exe");
 		 browserObject = new ChromeDriver();
 		 browserObject .manage().window().maximize();			
 		 HIASLOGIN = new HiasLoginPage(browserObject);
@@ -89,7 +89,7 @@ public class AddPrimaryMemberTest {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			PMDScreen = new AddPrimaryMemberDetails(browserObject);
+			PMDScreen = new AddLifePrimaryMemberDetails(browserObject);
 			PMDScreen.Add_NEW_Primary_Member(Firstname,Lastname,Emailaddress,
 					address,ZiPCode,Agee,Gender,Maritalstatus,EMPClass, EMP_Date , salary , Sal_Date);
 			PMDScreen.Reporting_Preference(Primary_preference_invoices);
@@ -121,7 +121,7 @@ public class AddPrimaryMemberTest {
 			File source = ((TakesScreenshot)browserObject).getScreenshotAs(OutputType.FILE);
 			
 			try {
-				FileHandler.copy(source, new File("D:\\Hossam\\Automation\\screenshots\\"+dateFormat.format(date)+".png")); 
+				FileHandler.copy(source, new File("D:\\Local Disk\\Git\\HIASAuto\\BESTDDFinalVersion2\\screenshots\\"+dateFormat.format(date)+".png")); 
 			} catch (IOException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();

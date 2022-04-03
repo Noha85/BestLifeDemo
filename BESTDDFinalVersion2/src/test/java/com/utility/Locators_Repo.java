@@ -105,6 +105,8 @@ public class Locators_Repo {
 	public By Add_Life_Customer_Btn1 = By.xpath("//input[@id='ctl00_DefaultContent_uxAddLifeCustomerCommand']");
 	public By Search_Btn1 = By.name("ctl00$DefaultContent$uxSearchCommand");
 	public By Customernum1 = By.name("ctl00$DefaultContent$uxCustomerNumberField");
+
+	
 	public By Customerlocation1 = By.xpath("//table[@id='ctl00_DefaultContent_uxCustomersList']//a[@id='ctl00_DefaultContent_uxCustomersList_ctl02_uxCustomerNumberCommand']");
 	public By Cust_Cases_Tab1 = By.xpath("//a[@id='ctl00_DefaultContent_uxCustomerDetailsTabContainer_uxCustomerCasesTab']//span[@class='innerWrap']");
 	public By Add_Life_Coverage_Btn1 = By.name("ctl00$DefaultContent$uxAddLifeCoverageCommand");
@@ -127,10 +129,9 @@ public class Locators_Repo {
 	public String ActualDOEResult1 = "At Date of Event";
 	
 	
-	// Add Primary Member Details Details Screen Locators 
+	// Add Primary Member Details Screen Locators 
 	
 	public By Add_Btn = By.id("ctl00_DefaultContent_uxAddMemberCommand");
-	
 	public By FirstName = By.id("ctl00_DefaultContent_uxFirstNameField");
 	public By LastName = By.id("ctl00_DefaultContent_uxLastNameField");
 	public By EmailAddress = By.id("ctl00_DefaultContent_uxEmailAddressField");
@@ -141,6 +142,7 @@ public class Locators_Repo {
 	public By Female = By.xpath("//input[@id='ctl00_DefaultContent_uxGendersList_0']");
 	public By MaritalStatus = By.id("ctl00_DefaultContent_uxMaritalStatusesList");
 	public By MaleTitle = By.xpath("//label[@for='ctl00_DefaultContent_uxGendersList_1']");
+	public By PSSN = By.id("ctl00_DefaultContent_uxSSNField");
 	public String ActualMaleResult = "Male" ;
 	
 	public By EMP_Add_Row = By.id("ctl00_DefaultContent_uxEmployeeClassificationAddCommand");
@@ -179,5 +181,9 @@ public class Locators_Repo {
 	public By SemiAnnually_radio  = By.xpath("//input[@id='ctl00_DefaultContent_uxLifeCoverageInvoiceBillingCycleList_2']");
 	public By Annually_radio  = By.xpath("//input[@id='ctl00_DefaultContent_uxLifeCoverageInvoiceBillingCycleList_3']");
 	public By Pagetitle  = By.className("pagetitle");
+	
+	//Primary Members Search screen
+	public By prim_SSN= By.id("ctl00_DefaultContent_uxSsnField");
+	public By prim_search_Btn= By.id("ctl00_DefaultContent_uxSearchCommand");
 
 }

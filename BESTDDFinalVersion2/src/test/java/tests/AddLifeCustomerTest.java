@@ -31,7 +31,7 @@ public class AddLifeCustomerTest {
 
   @BeforeMethod
   public void beforeClass() {
-	  System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
+	  System.setProperty("webdriver.chrome.driver", "D:\\Local Disk\\Git\\HIASAuto\\BESTDDFinalVersion2\\chromedriver.exe");
 	 browserObject = new ChromeDriver();
 	 browserObject .manage().window().maximize();			
 	 HIASLOGIN = new HiasLoginPage(browserObject);

@@ -15,7 +15,7 @@ public class ExcelLib  {
 	public static Object[][] loginData() throws IOException {
 		Object[][] arrayObject = getExcelData(
 				
-				"D:\\Hossam\\Automation\\BESTDD\\src\\test\\java\\testdata\\TestData.xlsx",
+				"D:\\Local Disk\\Git\\HIASAuto\\BESTDDFinalVersion2\\src\\test\\java\\testdata\\TestData.xlsx",
 				"ValidateCDCODE");
 		return arrayObject;
 	}
@@ -23,7 +23,7 @@ public class ExcelLib  {
 	@DataProvider(name = "SearchforPlan")
 	public static Object[][] getplan() throws IOException {
 		Object[][] arrayObject = getExcelData(
-				"D:\\Hossam\\Automation\\BESTDD\\src\\test\\java\\testdata\\TestData.xlsx",
+				"D:\\Local Disk\\Git\\HIASAuto\\BESTDDFinalVersion2\\src\\test\\java\\testdata\\TestData.xlsx",
 				"SearchforPlan");
 		return arrayObject;
 	}
@@ -31,7 +31,7 @@ public class ExcelLib  {
 	@DataProvider(name = "Mandatory")
 	public static Object[][] getmandatory() throws IOException {
 		Object[][] arrayObject = getExcelData(
-				"D:\\Hossam\\Automation\\BESTDD\\src\\test\\java\\testdata\\TestData.xlsx",
+				"D:\\Local Disk\\Git\\HIASAuto\\BESTDDFinalVersion2\\src\\test\\java\\testdata\\TestData.xlsx",
 				"Mandatory");
 		return arrayObject;
 	}
@@ -39,7 +39,7 @@ public class ExcelLib  {
 	@DataProvider(name = "Clear&Cancel")
 	public static Object[][] getClearnCancel() throws IOException {
 		Object[][] arrayObject = getExcelData(
-				"D:\\Hossam\\Automation\\BESTDD\\src\\test\\java\\testdata\\TestData.xlsx",
+				"D:\\Local Disk\\Git\\HIASAuto\\BESTDDFinalVersion2\\src\\test\\java\\testdata\\TestData.xlsx",
 				"Clear&Cancel");
 		return arrayObject;
 	}
@@ -47,7 +47,7 @@ public class ExcelLib  {
 	@DataProvider(name = "Add")
 	public static Object[][] gethappyscenario() throws IOException {
 		Object[][] arrayObject = getExcelData(
-				"D:\\Hossam\\Automation\\BESTDDFinalVersion2\\src\\test\\java\\testdata\\TestData.xlsx",
+				"D:\\Local Disk\\Git\\HIASAuto\\BESTDDFinalVersion2\\src\\test\\java\\testdata\\TestData.xlsx",
 				"Add");
 		return arrayObject;
 	}
@@ -55,7 +55,7 @@ public class ExcelLib  {
 	@DataProvider(name = "AddCC")
 	public static Object[][] AddCustCase() throws IOException {
 		Object[][] arrayObject = getExcelData(
-				"D:\\Hossam\\Automation\\BESTDDFinalVersion2\\src\\test\\java\\testdata\\TestData.xlsx",
+				"D:\\Local Disk\\Git\\HIASAuto\\BESTDDFinalVersion2\\src\\test\\java\\testdata\\TestData.xlsx",
 				"AddCC");
 		return arrayObject;
 	}
@@ -63,7 +63,7 @@ public class ExcelLib  {
 	@DataProvider(name = "AddPM")
 	public static Object[][] AddPrimaryMember() throws IOException {
 		Object[][] arrayObject = getExcelData(
-				"D:\\Hossam\\Automation\\BESTDDFinalVersion2\\src\\test\\java\\testdata\\TestData.xlsx",
+				"D:\\Local Disk\\Git\\HIASAuto\\BESTDDFinalVersion2\\src\\test\\java\\testdata\\TestData.xlsx",
 				"AddPM");
 		return arrayObject;
 	}
@@ -71,7 +71,7 @@ public class ExcelLib  {
 	@DataProvider(name = "CreateCustomer")
 	public static Object[][] CreateCustomer() throws IOException {
 		Object[][] arrayObject = getExcelData(
-				"D:\\Hossam\\Automation\\BESTDDFinalVersion2\\src\\test\\java\\testdata\\TestData.xlsx",
+				"D:\\Local Disk\\Git\\HIASAuto\\BESTDDFinalVersion2\\src\\test\\java\\testdata\\TestData.xlsx",
 				"CreateCustomer");
 		return arrayObject;
 	}
@@ -82,11 +82,17 @@ public class ExcelLib  {
 		@DataProvider(name = "Publish")
 		public static Object[][] publishcheckbox() throws IOException {
 			Object[][] arrayObject = getExcelData(
-					"D:\\Hossam\\Automation\\BESTDDFinalVersion\\src\\test\\java\\testdata\\TestData.xlsx",
+					"D:\\Local Disk\\Git\\HIASAuto\\BESTDDFinalVersion2\\src\\test\\java\\testdata\\TestData.xlsx",
 					"Publish");
 			return arrayObject;
 	}
-	
+		@DataProvider(name = "AddPriamryMember")
+		public static Object[][] AddNewPrimaryMember() throws IOException {
+			Object[][] arrayObject = getExcelData(
+					"D:\\Local Disk\\Git\\HIASAuto\\BESTDDFinalVersion2\\src\\test\\java\\testdata\\TestData.xlsx",
+					"AddPrimaryMember");
+			return arrayObject;
+		}
 /*	
 	//ConCat 2 or 3 data provider Function
 	@DataProvider(name = "objectCodes")

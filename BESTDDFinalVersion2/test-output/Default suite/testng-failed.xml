@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.AddPlanRateDefinition">
+      <class name="tests.AddPrimaryMemberTest">
         <methods>
-          <include name="afterClass"/>
+          <include name="AddnewPlanRate" invocation-numbers="1"/>
           <include name="beforeClass"/>
-          <include name="AddnewPlanRate" invocation-numbers="0 1"/>
+          <include name="afterClass"/>
         </methods>
-      </class> <!-- tests.AddPlanRateDefinition -->
+      </class> <!-- tests.AddPrimaryMemberTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

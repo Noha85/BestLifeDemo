@@ -10,10 +10,10 @@ import org.openqa.selenium.WebDriver;
 
 import com.utility.Locators_Repo;
 
-public class AddPrimaryMemberDetails extends Locators_Repo {
+public class AddLifePrimaryMemberDetails extends Locators_Repo {
 	//hello
 
-	public AddPrimaryMemberDetails (WebDriver browserObject){
+	public AddLifePrimaryMemberDetails (WebDriver browserObject){
 		this.browserObject= browserObject;
 	}
 
@@ -253,7 +253,7 @@ public class AddPrimaryMemberDetails extends Locators_Repo {
 			}
 			try 
 			{
-				Runtime.getRuntime().exec("D:\\Hossam\\Automation\\BESTDDFinalVersion2\\Autoit\\clickfocus.exe");
+				Runtime.getRuntime().exec("D:\\Local Disk\\Git\\HIASAuto\\BESTDDFinalVersion2\\Autoit\\clickfocus.exe");
 			}
 			catch (IOException e) {
 				e.printStackTrace();
