@@ -22,6 +22,8 @@ public class PrimaryMemberMenu extends Locators_Repo {
 	public void Nav_PrimaryMemberDetailsScreen() {
 		
 		browserObject.findElement(PrimaryMembers_HyberLink).click();
+		WebDriverWait wait = new WebDriverWait(browserObject,30);
+		wait.until(ExpectedConditions.titleContains("Primary"));
 	}
 	
 	public void navigatetoPrimaryMemberDetailsScreen_Menu() {
