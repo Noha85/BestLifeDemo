@@ -51,7 +51,7 @@ public class AddPrimaryMemberDetailsTest {
 			
 			PMDPScreen = new PrimaryMemberDetailsPage(browserObject);
 			PMDPScreen.Add_NEW_Primary_Member(Cust_Num,Firstname,Lastname,emailaddress,P_Address,ZiPCode,Agee,Gender,Maritalstatus,SSN);
-		 				
+		 		//test		
 	  }
 
 
