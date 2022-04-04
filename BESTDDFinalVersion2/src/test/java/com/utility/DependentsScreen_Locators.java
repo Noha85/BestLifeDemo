@@ -14,4 +14,5 @@ public class DependentsScreen_Locators extends Base {
 	public By Dependent_columns = By.tagName("td");	
 	public By Dependents_Pages_row = By.xpath("//*[@id=\"ctl00_DefaultContent_uxDependentsList\"]/tbody/tr[12]/td/table/tbody/tr");	
 	public By Dependent_page_Link = By.tagName("td");
+	public By TopDependentFName_column = By.id("ctl00_DefaultContent_uxDependentsList_ctl02_uxFirstNameCommand");
 }
