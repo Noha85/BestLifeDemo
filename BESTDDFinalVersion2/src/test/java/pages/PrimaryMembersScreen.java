@@ -13,8 +13,11 @@ public class PrimaryMembersScreen extends PrimaryMembersScreen_Locators{
 		this.browserObject= browserObject;
 	}
 	
+
+	
 	public void search(String PrimaryMemberNum) 
 	{
+		WebDriverWait wait = new WebDriverWait(browserObject, 10);
 		browserObject.findElement(PrimaryNumber).sendKeys(PrimaryMemberNum);
 		browserObject.findElement(PrimaryNumSearch_btn).click();
 	}

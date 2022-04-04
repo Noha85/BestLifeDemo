@@ -97,7 +97,7 @@ public class ExcelLib  {
 		}
 		
 		@DataProvider(name = "AddDependentCase")
-		public static Object[][] AddDependent() throws IOException {
+		public static Object[][] AddDependentCase() throws IOException {
 			Object[][] arrayObject = getExcelData(
 					"D:\\git\\HIASAuto\\BESTDDFinalVersion2\\src\\test\\java\\testdata\\TestData.xlsx",
 					"AddDependentCase");
