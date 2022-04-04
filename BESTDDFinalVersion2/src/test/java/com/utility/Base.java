@@ -37,8 +37,7 @@ public void add_Input_Date(WebDriver browserObject, String inputDate, By locator
        browserObject.findElement(locator).sendKeys(Keys.ARROW_LEFT);
        browserObject.findElement(locator).sendKeys(Keys.ARROW_LEFT);
        browserObject.findElement(locator).sendKeys(Keys.ARROW_LEFT);
-       
-       
+             
 
        // browserObject.findElement(Effective_from_date_path).click();
         	browserObject.findElement(locator).sendKeys(newDate);

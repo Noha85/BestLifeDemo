@@ -7,10 +7,13 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.utility.AddPrimaryMemberDetails_Locators;
 import com.utility.Locators_Repo;
 
-public class AddPrimaryMemberDetails extends Locators_Repo {
+public class AddPrimaryMemberDetails extends AddPrimaryMemberDetails_Locators {
 	//hello
 
 	public AddPrimaryMemberDetails (WebDriver browserObject){
@@ -265,6 +268,14 @@ public class AddPrimaryMemberDetails extends Locators_Repo {
 		String ActualMessage = browserObject.findElement(Pagetitle).getText();
 		
 		return ActualMessage;
+	}
+	
+	public void Navigate_to_Dependents_Screen()
+	{
+		browserObject.findElement(Dependents_button).click();
+		WebDriverWait wait = new WebDriverWait(browserObject, 10);
+		wait.until(ExpectedConditions.titleContains("Dependents"));
+		
 	}
 	
 }

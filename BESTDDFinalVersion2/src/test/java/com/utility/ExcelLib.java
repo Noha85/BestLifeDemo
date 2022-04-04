@@ -88,6 +88,13 @@ public class ExcelLib  {
 			return arrayObject;
 	}
 	
+		@DataProvider(name = "AddDependent")
+		public static Object[][] AddDependent() throws IOException {
+			Object[][] arrayObject = getExcelData(
+					"D:\\git\\HIASAuto\\BESTDDFinalVersion2\\src\\test\\java\\testdata\\TestData.xlsx",
+					"AddDependent");
+			return arrayObject;
+		}
 /*	
 	//ConCat 2 or 3 data provider Function
 	@DataProvider(name = "objectCodes")
