@@ -1,6 +1,7 @@
 package tests;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -60,8 +61,7 @@ public class AddDependentTest {
 		DependentScreen.Navigate_to_DependentsDetails_Screen();
 		AddDependentScreen = new AddDependentDetails(browserObject);
 		AddDependentScreen.Add_New_Dependent(FirstName, LastName, Relationship, DateOfBirth, Gender, Eligible, EligibleReason, ProofDate);
-		boolean result = DependentScreen.Verify_Dependent_Added_Successfully(FirstName, LastName, Gender, Relationship);
-		assertEquals(result, true);
+		assertTrue(DependentScreen.Verify_Dependent_Added_Successfully(FirstName, LastName, Gender, Relationship));
 	}
 	
 	@AfterMethod

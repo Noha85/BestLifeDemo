@@ -1,6 +1,6 @@
 package tests;
 
-import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,10 +10,11 @@ import org.testng.annotations.Test;
 
 import com.utility.ExcelLib;
 
+import pages.AddDependentCoverageDetails;
 import pages.AddDependentDetails;
-import pages.AddPrimaryMemberDetails;
 import pages.CustomerDetailsScreen;
 import pages.CustomerMenu;
+import pages.DependentCasesScreen;
 import pages.DependentsScreen;
 import pages.HiasLoginPage;
 import pages.PrimaryMemberMenu;
@@ -29,6 +30,8 @@ public class AddDependentCaseTest {
 	PrimaryMembersScreen PMScreen;
 	DependentsScreen DependentScreen;
 	AddDependentDetails AddDependentScreen;
+	DependentCasesScreen DepCasesScreen;
+	AddDependentCoverageDetails DepCoverageScreen;
 	
 	@BeforeMethod
 	public void BeforeClass()
@@ -40,7 +43,8 @@ public class AddDependentCaseTest {
 	}
 	
 	@Test(dataProvider = "AddDependentCase",dataProviderClass = ExcelLib.class)
-	public void AddNewDependent(String username , String password, String CustomerNum, String PMemberNum)
+	public void AddNewDependentCoverage(String username , String password, String CustomerNum, String PMemberNum, String coverage,
+			String effDate,String WaitingPeriod, String majorEffDate, String EnrollmentReason) throws InterruptedException
 	{
 		HIASLOGIN.Login(username, password);
 		CMenu = new CustomerMenu(browserObject);
@@ -51,12 +55,17 @@ public class AddDependentCaseTest {
 		PMScreenMenu.Nav_PrimaryMemberDetailsScreen();
 		PMScreen = new PrimaryMembersScreen(browserObject);
 		PMScreen.search(PMemberNum);
-		PMScreen.selectPrimaryMember();
 		PMScreen.Navigate_to_Dependents_Screen();
 		DependentScreen = new DependentsScreen(browserObject);
 		DependentScreen.Navigate_to_ExistingDependentsDetails_Screen();
-		//DependentScreen.Navigate_to_DependentsDetails_Screen();
-		//AddDependentScreen = new AddDependentDetails(browserObject);
+		AddDependentScreen = new AddDependentDetails(browserObject);
+		AddDependentScreen.Navigate_to_DependentCases_Screen();
+		DepCasesScreen = new DependentCasesScreen(browserObject);
+		DepCasesScreen.Select_Coverage(coverage);
+		DepCasesScreen.Navigate_to_DependentCoverageDetails_Screen();
+		DepCoverageScreen = new AddDependentCoverageDetails(browserObject);
+		DepCoverageScreen.Add_New_DependentCoverage(CustomerNum, PMemberNum, effDate, WaitingPeriod, majorEffDate, EnrollmentReason);
+		assertTrue(DepCasesScreen.Verify_DependentCase_Added_Successfully());
 		
 	}
 	

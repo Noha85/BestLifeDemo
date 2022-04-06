@@ -2,10 +2,6 @@ package pages;
 
 import static org.testng.Assert.assertEquals;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -115,7 +111,9 @@ public class AddDependentDetails extends AddDependentDetails_Locators{
 		
 	}
 	
-
-	
+	public void Navigate_to_DependentCases_Screen() 
+	{
+		browserObject.findElement(DependentCases_Tab).click();
+	}	
 	
 }
