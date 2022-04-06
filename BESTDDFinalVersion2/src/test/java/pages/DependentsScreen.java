@@ -22,6 +22,13 @@ public class DependentsScreen extends DependentsScreen_Locators {
 		wait.until(ExpectedConditions.titleContains("Dependent Details"));
 	}
 	
+	public void Navigate_to_ExistingDependentsDetails_Screen ()
+	{
+		browserObject.findElement(TopDependentFName_column).click();
+		WebDriverWait wait = new WebDriverWait(browserObject, 10);
+		wait.until(ExpectedConditions.titleContains("Dependent Details"));
+	}
+	
 	public boolean Verify_Dependent_Added_Successfully (String firstName, String lastName, String Gender, String Relation) throws InterruptedException 
 	{
 		boolean result;

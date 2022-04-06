@@ -13,8 +13,11 @@ public class PrimaryMembersScreen extends PrimaryMembersScreen_Locators{
 		this.browserObject= browserObject;
 	}
 	
+
+	
 	public void search(String PrimaryMemberNum) 
 	{
+		WebDriverWait wait = new WebDriverWait(browserObject, 10);
 		browserObject.findElement(PrimaryNumber).sendKeys(PrimaryMemberNum);
 		browserObject.findElement(PrimaryNumSearch_btn).click();
 	}
@@ -25,5 +28,11 @@ public class PrimaryMembersScreen extends PrimaryMembersScreen_Locators{
 		wait.until(ExpectedConditions.numberOfElementsToBe(PrimaryNum_tableRows, 2));
 		browserObject.findElement(PrimaryNum_cell).click();
 		wait.until(ExpectedConditions.titleContains("Primary Member Details"));
+	}
+	
+	public void Navigate_to_Dependents_Screen() 
+	{
+		browserObject.findElement(Dependents_cell).click();
+		wait.until(ExpectedConditions.titleContains("Dependents"));
 	}
 }
