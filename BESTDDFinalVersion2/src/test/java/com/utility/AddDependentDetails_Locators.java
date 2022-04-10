@@ -21,5 +21,5 @@ public class AddDependentDetails_Locators extends Base{
 	public By DependentStatus_text = By.id("ctl00_DefaultContent_uxStatusField");
 	public By DepententDone_btn = By.id("ctl00_DefaultContent_uxDependentDetailsDoneCommand");
 	public By DependentProofdate_Text = By.id("ctl00_DefaultContent_uxProofDateField");
-
+	public By DependentCases_Tab = By.id("ctl00_DefaultContent_uxDependentDetailsTabContainer_uxDependentCasesTab");
 }
