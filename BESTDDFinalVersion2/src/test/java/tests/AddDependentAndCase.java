@@ -12,6 +12,7 @@ import com.utility.ExcelLib;
 
 import pages.AddDependentCoverageDetails;
 import pages.AddDependentDetails;
+import pages.AddPrimaryMemberDetails;
 import pages.CustomerDetailsScreen;
 import pages.CustomerMenu;
 import pages.DependentCasesScreen;
@@ -20,7 +21,7 @@ import pages.HiasLoginPage;
 import pages.PrimaryMemberMenu;
 import pages.PrimaryMembersScreen;
 
-public class AddDependentCaseTest {
+public class AddDependentAndCase {
 	
 	WebDriver browserObject;
 	HiasLoginPage HIASLOGIN;
@@ -28,6 +29,7 @@ public class AddDependentCaseTest {
 	CustomerDetailsScreen CustDetailsScreen ;
 	PrimaryMemberMenu PMScreenMenu ;
 	PrimaryMembersScreen PMScreen;
+	AddPrimaryMemberDetails PMDetailsScreen;
 	DependentsScreen DependentScreen;
 	AddDependentDetails AddDependentScreen;
 	DependentCasesScreen DepCasesScreen;
@@ -43,9 +45,10 @@ public class AddDependentCaseTest {
 		HIASLOGIN.NavigatetoURL();
 	}
 	
-	@Test(dataProvider = "AddDependentCase",dataProviderClass = ExcelLib.class)
-	public void AddNewDependentCoverage(String username , String password, String CustomerNum, String PMemberNum, String DependentFName,String coverage,
-			String effDate,String WaitingPeriod, String majorEffDate, String EnrollmentReason) throws InterruptedException
+	@Test(dataProvider = "AddDependentAndCase",dataProviderClass = ExcelLib.class)
+	public void AddNewDependent(String username , String password, String CustomerNum, String PMemberNum, String FirstName, String LastName,
+			String Relationship, String DateOfBirth, String Gender, String Eligible, String EligibleReason, String ProofDate,String coverage,
+			String effDate,String WaitingPeriod, String majorEffDate, String EnrollmentReason) throws InterruptedException 
 	{
 		HIASLOGIN.Login(username, password);
 		CMenu = new CustomerMenu(browserObject);
@@ -56,9 +59,14 @@ public class AddDependentCaseTest {
 		PMScreenMenu.Nav_PrimaryMemberDetailsScreen();
 		PMScreen = new PrimaryMembersScreen(browserObject);
 		PMScreen.search(PMemberNum);
-		PMScreen.Navigate_to_Dependents_Screen();
+		PMScreen.selectPrimaryMember();
+		PMDetailsScreen = new AddPrimaryMemberDetails(browserObject);
+		PMDetailsScreen.Navigate_to_Dependents_Screen();
 		DependentScreen = new DependentsScreen(browserObject);
-		DependentScreen.Navigate_to_ExistingDependentsDetails_Screen(DependentFName);
+		DependentScreen.Navigate_to_DependentsDetails_Screen();
+		AddDependentScreen = new AddDependentDetails(browserObject);
+		AddDependentScreen.Add_New_Dependent(FirstName, LastName, Relationship, DateOfBirth, Gender, Eligible, EligibleReason, ProofDate);
+		DependentScreen.Navigate_to_ExistingDependentsDetails_Screen(FirstName);
 		AddDependentScreen = new AddDependentDetails(browserObject);
 		AddDependentScreen.Navigate_to_DependentCases_Screen();
 		DepCasesScreen = new DependentCasesScreen(browserObject);
@@ -67,7 +75,6 @@ public class AddDependentCaseTest {
 		DepCoverageScreen = new AddDependentCoverageDetails(browserObject);
 		DepCoverageScreen.Add_New_DependentCoverage(CustomerNum, PMemberNum, effDate, WaitingPeriod, majorEffDate, EnrollmentReason);
 		assertTrue(DepCasesScreen.Verify_DependentCase_Added_Successfully());
-		
 	}
 	
 	@AfterMethod
@@ -75,6 +82,5 @@ public class AddDependentCaseTest {
 		
 		browserObject.close();
   }
-
 
 }
