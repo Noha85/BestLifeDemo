@@ -6,9 +6,6 @@ import org.openqa.selenium.WebDriver;
 public class PrimaryMembersScreen_Locators {
 	
 	public WebDriver browserObject ;
-
-	//public By PrimaryNumber = By.id("ctl00_DefaultContent_uxPrimaryNumberField");
-
 	public By PrimaryNumber = By.id("ctl00_DefaultContent_uxPrimaryNumberField");
 	public By prim_SSN= By.id("ctl00_DefaultContent_uxSsnField");
 	public By PrimaryNumSearch_btn = By.id("ctl00_DefaultContent_uxSearchCommand");
