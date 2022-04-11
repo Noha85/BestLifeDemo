@@ -88,6 +88,14 @@ public class ExcelLib  {
 			return arrayObject;
 	}
 	
+		@DataProvider(name = "AddPriamryMember")
+		public static Object[][] AddNewPrimaryMember() throws IOException {
+			Object[][] arrayObject = getExcelData(
+					"D:\\Git\\HIASAuto\\BESTDDFinalVersion2\\src\\test\\java\\testdata\\TestData.xlsx",
+					"AddPrimaryMember");
+			return arrayObject;
+		}
+		
 		@DataProvider(name = "AddDependent")
 		public static Object[][] AddDependent() throws IOException {
 			Object[][] arrayObject = getExcelData(

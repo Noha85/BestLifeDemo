@@ -13,10 +13,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.utility.AddPrimaryMemberDetails_Locators;
 import com.utility.Locators_Repo;
 
-public class AddPrimaryMemberDetails extends AddPrimaryMemberDetails_Locators {
+public class AddLifePrimaryMemberDetails extends AddPrimaryMemberDetails_Locators {
 	//hello
 
-	public AddPrimaryMemberDetails (WebDriver browserObject){
+	public AddLifePrimaryMemberDetails (WebDriver browserObject){
 		this.browserObject= browserObject;
 	}
 
@@ -270,12 +270,6 @@ public class AddPrimaryMemberDetails extends AddPrimaryMemberDetails_Locators {
 		return ActualMessage;
 	}
 	
-	public void Navigate_to_Dependents_Screen()
-	{
-		browserObject.findElement(Dependents_button).click();
-		WebDriverWait wait = new WebDriverWait(browserObject, 10);
-		wait.until(ExpectedConditions.titleContains("Dependents"));
-		
-	}
+	
 	
 }

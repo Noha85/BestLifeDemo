@@ -7,6 +7,7 @@ public class AddPrimaryMemberDetails_Locators extends Base{
 
 	public WebDriver browserObject ;
 	
+	public By PrimaryMembers_HyperLink = By.linkText("Primary Members");
 	public By Add_Btn = By.id("ctl00_DefaultContent_uxAddMemberCommand");
 	
 	public By FirstName = By.id("ctl00_DefaultContent_uxFirstNameField");

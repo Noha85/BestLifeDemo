@@ -10,6 +10,7 @@ public class Locators_Repo {
 	//Primary Member Menu 
 	public By PrimaryMembers_HyberLink = By.id("ctl00_DefaultContent_uxCustomersList_ctl02_uxPrimaryMembersCommand");
 	public By PrimaryMembers_Menu = By.id("ctl00_uxMenu_ctl38_lnkMenu");
+	
 	//LD Rate Management Menu Locators
 	
 	public By Rating = By.xpath("//*[@id=\"ctl00_uxMenun1\"]/table/tbody/tr/td/a");
