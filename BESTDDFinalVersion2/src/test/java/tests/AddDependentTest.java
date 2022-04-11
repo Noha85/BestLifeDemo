@@ -1,6 +1,5 @@
 package tests;
 
-import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.WebDriver;
@@ -37,13 +36,14 @@ public class AddDependentTest {
 	{
 		System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
 		browserObject = new ChromeDriver();
+		browserObject .manage().window().maximize();	
 		HIASLOGIN = new HiasLoginPage(browserObject);
 		HIASLOGIN.NavigatetoURL();
 	}
 	
 	@Test(dataProvider = "AddDependent",dataProviderClass = ExcelLib.class)
 	public void AddNewDependent(String username , String password, String CustomerNum, String PMemberNum, String FirstName, String LastName,
-			String Relationship, String DateOfBirth, String Gender, String Eligible, String EligibleReason, String ProofDate) throws InterruptedException 
+			String Relationship, String Age, String Gender, String Eligible, String EligibleReason, String ProofDate) throws InterruptedException 
 	{
 		HIASLOGIN.Login(username, password);
 		CMenu = new CustomerMenu(browserObject);
@@ -60,7 +60,7 @@ public class AddDependentTest {
 		DependentScreen = new DependentsScreen(browserObject);
 		DependentScreen.Navigate_to_DependentsDetails_Screen();
 		AddDependentScreen = new AddDependentDetails(browserObject);
-		AddDependentScreen.Add_New_Dependent(FirstName, LastName, Relationship, DateOfBirth, Gender, Eligible, EligibleReason, ProofDate);
+		AddDependentScreen.Add_New_Dependent(FirstName, LastName, Relationship, Age, Gender, Eligible, EligibleReason, ProofDate);
 		assertTrue(DependentScreen.Verify_Dependent_Added_Successfully(FirstName, LastName, Gender, Relationship));
 	}
 	

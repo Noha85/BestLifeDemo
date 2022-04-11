@@ -103,6 +103,14 @@ public class ExcelLib  {
 					"AddDependentCase");
 			return arrayObject;
 		}
+		
+		@DataProvider(name = "AddDependentAndCase")
+		public static Object[][] AddDependentAndCase() throws IOException {
+			Object[][] arrayObject = getExcelData(
+					"D:\\git\\HIASAuto\\BESTDDFinalVersion2\\src\\test\\java\\testdata\\TestData.xlsx",
+					"AddDependentAndCase");
+			return arrayObject;
+		}
 /*	
 	//ConCat 2 or 3 data provider Function
 	@DataProvider(name = "objectCodes")
