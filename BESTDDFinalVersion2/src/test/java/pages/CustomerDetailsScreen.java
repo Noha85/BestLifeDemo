@@ -356,7 +356,8 @@ public class CustomerDetailsScreen extends Locators_Repo{
 		
 		return ActualMessage;
 	}
-	
+	public void findPrimaryMember() {
+	}
 	
 }
 
