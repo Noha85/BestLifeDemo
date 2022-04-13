@@ -132,7 +132,7 @@ public class AddPrimaryMemberTest {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		browserObject.close();
+		//browserObject.close();
 	  }
 	  
 	
