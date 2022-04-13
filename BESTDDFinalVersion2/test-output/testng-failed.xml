@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.AddPlanRateDefinition">
+      <class name="tests.AddPrimaryMemberCase">
         <methods>
-          <include name="afterClass"/>
+          <include name="Hamada"/>
           <include name="beforeClass"/>
-          <include name="AddnewPlanRate" invocation-numbers="0 1"/>
         </methods>
-      </class> <!-- tests.AddPlanRateDefinition -->
+      </class> <!-- tests.AddPrimaryMemberCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

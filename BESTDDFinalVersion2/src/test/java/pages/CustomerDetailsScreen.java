@@ -357,6 +357,9 @@ public class CustomerDetailsScreen extends Locators_Repo{
 		return ActualMessage;
 	}
 	public void findPrimaryMember() {
+		browserObject.findElement(PrimaryNumberField).sendKeys("105739451");
+		browserObject.findElement(Search_Btn1).click();
+
 	}
 	
 }

@@ -125,6 +125,7 @@ public class Locators_Repo {
 	public By CustTitle1 = By.xpath("//div[@class='LifeCustomerCoveragePanel']//div//div[@class='pagetitledetail']");
 	public String ActualYesResult1 = "Yes";
 	public String ActualDOEResult1 = "At Date of Event";
+	public By PrimaryNumberField = By.xpath("//*[@id=\"ctl00_DefaultContent_uxPrimaryNumberField\"]");
 	
 	
 	}
