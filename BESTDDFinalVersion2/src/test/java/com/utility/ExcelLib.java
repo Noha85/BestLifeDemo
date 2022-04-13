@@ -77,7 +77,13 @@ public class ExcelLib  {
 		return arrayObject;
 	}
 	
-	
+	@DataProvider(name = "AddPriamryMember")
+	public static Object[][] AddPriamryMember() throws IOException {
+		Object[][] arrayObject = getExcelData(
+				"D:\\git\\HIASAuto\\BESTDDFinalVersion2\\src\\test\\java\\testdata\\TestData.xlsx",
+				"AddPriamryMember");
+		return arrayObject;
+}	
 	
 		
 		@DataProvider(name = "Publish")
