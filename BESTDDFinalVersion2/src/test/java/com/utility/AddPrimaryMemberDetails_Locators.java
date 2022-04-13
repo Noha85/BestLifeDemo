@@ -59,4 +59,5 @@ public class AddPrimaryMemberDetails_Locators extends Base{
 	public By Pagetitle  = By.className("pagetitle");
 		
 	public By Dependents_button = By.id("ctl00_DefaultContent_uxDependentsListCommand");
+	public By PrimaryMembers_HyperLink = By.linkText("Primary Members");
 }
