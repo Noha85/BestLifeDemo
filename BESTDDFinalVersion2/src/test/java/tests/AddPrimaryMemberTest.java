@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import com.utility.ExcelLib;
 
-import pages.AddPrimaryMemberDetails;
+import pages.AddLifePrimaryMemberDetails;
 import pages.CustomerDetailsScreen;
 import pages.CustomerMenu;
 import pages.HiasLoginPage;
@@ -35,7 +35,7 @@ public class AddPrimaryMemberTest {
 	CustomerMenu CMenu ;
 	CustomerDetailsScreen CustDetailsScreen ;
 	PrimaryMemberMenu PMScreen ;
-	AddPrimaryMemberDetails PMDScreen ;
+	AddLifePrimaryMemberDetails PMDScreen ;
 	
 	String ActualResult = "Primary Members";
 	
@@ -89,7 +89,7 @@ public class AddPrimaryMemberTest {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			PMDScreen = new AddPrimaryMemberDetails(browserObject);
+			PMDScreen = new AddLifePrimaryMemberDetails(browserObject);
 			PMDScreen.Add_NEW_Primary_Member(Firstname,Lastname,Emailaddress,
 					address,ZiPCode,Agee,Gender,Maritalstatus,EMPClass, EMP_Date , salary , Sal_Date);
 			PMDScreen.Reporting_Preference(Primary_preference_invoices);
