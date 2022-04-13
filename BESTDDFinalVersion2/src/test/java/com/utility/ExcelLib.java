@@ -62,13 +62,20 @@ public class ExcelLib  {
 	}
 	
 	@DataProvider(name = "AddPM")
-	public static Object[][] AddPrimaryMember() throws IOException {
+	public static Object[][] AddPrimaryMember1() throws IOException {
 		Object[][] arrayObject = getExcelData(
 				"D:\\git\\HIASAuto\\BESTDDFinalVersion2\\src\\test\\java\\testdata\\TestData.xlsx",
 				"AddPM");
 		return arrayObject;
 	}
 	
+	@DataProvider(name = "AddPriamryMember")
+	public static Object[][] AddPrimaryMember() throws IOException {
+		Object[][] arrayObject = getExcelData(
+				"D:\\git\\HIASAuto\\BESTDDFinalVersion2\\src\\test\\java\\testdata\\TestData.xlsx",
+				"AddPriamryMember");
+		return arrayObject;
+	}
 	@DataProvider(name = "CreateCustomer")
 	public static Object[][] CreateCustomer() throws IOException {
 		Object[][] arrayObject = getExcelData(
