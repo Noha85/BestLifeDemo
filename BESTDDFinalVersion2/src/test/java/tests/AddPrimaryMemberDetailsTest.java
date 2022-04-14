@@ -34,30 +34,30 @@ public class AddPrimaryMemberDetailsTest {
 	  }
 	
 	
-	  @Test(dataProvider = "AddPriamryMember",dataProviderClass = ExcelLib.class)
-	  public void Addnewprimarymember(String username,String password, String CustomerNum,String Firstname,String Lastname,String emailaddress,String P_Address,String ZiPCode,String Agee , String Gender,String Maritalstatus, String SSN) throws InterruptedException{
+	  @Test(dataProvider = "AddPrimaryMember",dataProviderClass = ExcelLib.class)
+	  public void AddNewprimmember(String UserName,String Password, String CustomerNum,String Firstname,String Lastname,String emailaddress,String P_Address,String ZiPCode,String Agee,String Gender,String Maritalstatus, String SSN) throws InterruptedException{
 
 		  HIASLOGIN = new HiasLoginPage(browserObject);
-		  HIASLOGIN.Login(username , password);	  
+		  HIASLOGIN.Login(UserName , Password);	  
 			  
 		  CMenu = new CustomerMenu(browserObject);
 		  CMenu.navigatetoCustomerScreen();
 		  CustDetailsScreen = new CustomerDetailsScreen(browserObject);
 		  try {
-				Thread.sleep(1000);
+				Thread.sleep(2000);
 				} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 				}
 		  CustDetailsScreen.search(CustomerNum);
 			try {
-				Thread.sleep(1000);
+				Thread.sleep(2000);
 				} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 				}
 			
 			PMDPScreen = new AddPrimaryMemberDetails(browserObject);
-			PMDPScreen.Addnewprimarymember(Firstname, Lastname, emailaddress, P_Address, ZiPCode, Agee, Gender, Maritalstatus, SSN, Gender, Maritalstatus, SSN);
+			PMDPScreen.Addprimmemberdetails(Firstname, Lastname, emailaddress, P_Address, ZiPCode, Agee, Gender, Maritalstatus,SSN);
 	  }
 }
