@@ -69,11 +69,11 @@ public class ExcelLib  {
 		return arrayObject;
 	}
 	
-	@DataProvider(name = "AddPriamryMember")
+	@DataProvider(name = "AddPrimaryMember")
 	public static Object[][] AddPrimaryMember() throws IOException {
 		Object[][] arrayObject = getExcelData(
 				"D:\\git\\HIASAuto\\BESTDDFinalVersion2\\src\\test\\java\\testdata\\TestData.xlsx",
-				"AddPriamryMember");
+				"AddPrimaryMember");
 		return arrayObject;
 	}
 	@DataProvider(name = "CreateCustomer")
@@ -83,9 +83,6 @@ public class ExcelLib  {
 				"CreateCustomer");
 		return arrayObject;
 	}
-	
-	
-	
 		
 		@DataProvider(name = "Publish")
 		public static Object[][] publishcheckbox() throws IOException {

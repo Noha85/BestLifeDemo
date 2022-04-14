@@ -21,7 +21,7 @@ public class AddLifePrimaryMemberDetails extends AddPrimaryMemberDetails_Locator
 	}
 
 	
-	public void Add_NEW_Primary_Member(String Firstname , String Lastname , String Emailaddress ,
+	public void AddnewLifeprimarymember(String Firstname , String Lastname , String Emailaddress ,
 			String address , String ZiPCode , String Agee , String Gender,
 			String Maritalstatus,String EMPClass , String EMP_Date , String Salary , String Sal_Date)
 	{
