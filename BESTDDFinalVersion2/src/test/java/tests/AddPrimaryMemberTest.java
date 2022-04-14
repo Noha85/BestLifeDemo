@@ -90,8 +90,7 @@ public class AddPrimaryMemberTest {
 				e.printStackTrace();
 			}
 			PMDScreen = new AddLifePrimaryMemberDetails(browserObject);
-			PMDScreen.Add_NEW_Primary_Member(Firstname,Lastname,Emailaddress,
-					address,ZiPCode,Agee,Gender,Maritalstatus,EMPClass, EMP_Date , salary , Sal_Date);
+			PMDScreen.AddnewLifeprimarymember(Firstname,Lastname,Emailaddress,address,ZiPCode,Agee,Gender,Maritalstatus,EMPClass, EMP_Date , salary , Sal_Date);
 			PMDScreen.Reporting_Preference(Primary_preference_invoices);
 			PMDScreen.Invoice_Billing_Cycle( Billing_Cycle);
 			
