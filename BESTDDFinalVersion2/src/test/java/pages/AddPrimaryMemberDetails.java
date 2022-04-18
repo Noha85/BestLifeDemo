@@ -5,16 +5,24 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
+import java.util.Random;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import com.utility.AddPrimaryMemberDetails_Locators;
 import com.utility.Locators_Repo;
 
 public class AddPrimaryMemberDetails extends AddPrimaryMemberDetails_Locators {
 	//hello
+    int EXPECTED_ROW_COUNT =1;
 
 	public AddPrimaryMemberDetails (WebDriver browserObject){
 		this.browserObject= browserObject;
@@ -97,9 +105,18 @@ public class AddPrimaryMemberDetails extends AddPrimaryMemberDetails_Locators {
 			}
 		
 		browserObject.findElement(MaritalStatus).click();
-		
 		browserObject.findElement(MaritalStatus).sendKeys(Maritalstatus);
 		browserObject.findElement(MaritalStatus).click();
+		try {
+			Thread.sleep(2000);
+			} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			}
+		int num = Integer.parseInt(SSN);
+        int rand_SSN=generateRandomDigits(num);
+		String final_SSN=Integer.toString(rand_SSN);
+		browserObject.findElement(mem_SSN).sendKeys(final_SSN);
 			
 			try {
 				Thread.sleep(3000);
@@ -107,8 +124,8 @@ public class AddPrimaryMemberDetails extends AddPrimaryMemberDetails_Locators {
 				// TODO Auto-generated catch block
 				e3.printStackTrace();
 			}
-			 browserObject.findElement(PMS_Done).click();
-			 Thread.sleep(3000);
+			 browserObject.findElement(Primary_Member_Cases_Tab).click();
+			 Thread.sleep(4000);
 			try 
 			{
 				Runtime.getRuntime().exec("D:\\git\\HIASAuto\\BESTDDFinalVersion2\\Autoit\\clickfocus.exe");
@@ -116,8 +133,24 @@ public class AddPrimaryMemberDetails extends AddPrimaryMemberDetails_Locators {
 			catch (IOException e) {
 				e.printStackTrace();
 			}
-	      browserObject.findElement(Conf_Yes).click();
-	      Thread.sleep(3000);
+			browserObject.findElement(Conf_Yes).click();
+	      Thread.sleep(2000);
+
+	      String ExpectedText = "Primary Cases";
+	      String ExpText="Primary Member Number";
+	      JavascriptExecutor Js1 = (JavascriptExecutor) browserObject;
+	      Js1.executeScript("window.scrollBy(0,2000)");  
+	      WebElement prim_case_field = (new WebDriverWait(browserObject, 100)).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"ctl00_DefaultContent_uxPrimaryMemberCasesUpdatePanel\"]/div[2]/div[1]/span/big/b")));
+	     
+		    WebElement prim_num_field = (new WebDriverWait(browserObject, 100)).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(" //*[@id=\"ctl00_DefaultContent_uxPrimaryMemberNumberCaption\"]")));
+		    Assert.assertEquals(ExpText, prim_num_field.getText());
+		    Assert.assertEquals(ExpectedText, prim_case_field.getText());
+
+	}
+	
+	public static int generateRandomDigits(int n) {
+	    int m = (int) Math.pow(10, n - 1);
+	    return m + new Random().nextInt(9 * m);
 	}
 	
 	public String gettitle() {
