@@ -20,7 +20,7 @@ public class AddPrimaryMemberDetails_Locators extends Base{
 	public By MaritalStatus = By.id("ctl00_DefaultContent_uxMaritalStatusesList");
 	public By MaleTitle = By.xpath("//label[@for='ctl00_DefaultContent_uxGendersList_1']");
 	public String ActualMaleResult = "Male" ;
-	
+	public By mem_SSN = By.id("ctl00_DefaultContent_uxSSNField");
 	public By EMP_Add_Row = By.id("ctl00_DefaultContent_uxEmployeeClassificationAddCommand");
 	public By Sal_Add_Row = By.id("ctl00_DefaultContent_uxAnnualSalaryAddCommand");
 	
@@ -31,10 +31,11 @@ public class AddPrimaryMemberDetails_Locators extends Base{
 	public By Sal_Date_From = By.id("ctl00_DefaultContent_uxAnnualSalaryHistoryList_ctl02_uxDateFromEmployeeAnnualSalaryField");
 	public By PMS_Done = By.id("ctl00_DefaultContent_uxPrimaryMemberDetailsDoneCommand");
 	public By Conf_Yes = By.id("ctl00_DefaultContent_uxYesSavePrimaryConfirmationCommand");
-	public By Primary_Member_Cases_Tab = By.xpath("//a[@id='ctl00_DefaultContent_uxPrimaryMemberDetailsTabContainer_uxPrimaryMemberCasesTab']//span[@class='innerWrap']");
-	
-	
+	public By Primary_Member_Cases_Tab = By.id("ctl00_DefaultContent_uxPrimaryMemberDetailsTabContainer_uxPrimaryMemberCasesTab");
+	public By Prim_num_field=By.xpath("//*[@id=\"ctl00_DefaultContent_uxPrimaryMemberNumberCaption\"]");
 	public By HIAS_Default_Title = By.xpath("//label[@for='ctl00_DefaultContent_uxPrimaryPreferenceInReceivingInvoicesList_0']");
+	
+	public By Prim_Cases_tab=By.xpath("//*[@id=\"ctl00_DefaultContent_uxPrimaryMemberCasesUpdatePanel\"]/div[2]/div[1]/span/big/b");
 	
 	public By HIAS_Default_radio = By.xpath("//input[@id='ctl00_DefaultContent_uxPrimaryPreferenceInReceivingInvoicesList_0']");
 	public By Always_Print_radio = By.xpath("//input[@id='ctl00_DefaultContent_uxPrimaryPreferenceInReceivingInvoicesList_1']");
@@ -60,4 +61,8 @@ public class AddPrimaryMemberDetails_Locators extends Base{
 		
 	public By Dependents_button = By.id("ctl00_DefaultContent_uxDependentsListCommand");
 	public By PrimaryMembers_HyperLink = By.linkText("Primary Members");
+	public By prim_SSN= By.id("ctl00_DefaultContent_uxSsnField");
+	public By PrimaryNumSearch_btn = By.id("ctl00_DefaultContent_uxSearchCommand");
+	public By member_rows = By.tagName("tr");
+	public By member_columns = By.tagName("td");
 }

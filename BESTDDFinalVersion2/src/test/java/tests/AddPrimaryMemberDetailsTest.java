@@ -1,5 +1,7 @@
 package tests;
 
+import static org.testng.Assert.assertTrue;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeMethod;
@@ -59,5 +61,6 @@ public class AddPrimaryMemberDetailsTest {
 			
 			PMDPScreen = new AddPrimaryMemberDetails(browserObject);
 			PMDPScreen.Addprimmemberdetails(Firstname, Lastname, emailaddress, P_Address, ZiPCode, Agee, Gender, Maritalstatus,SSN);
+
 	  }
 }
