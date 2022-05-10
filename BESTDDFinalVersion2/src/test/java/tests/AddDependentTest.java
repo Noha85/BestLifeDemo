@@ -61,7 +61,7 @@ public class AddDependentTest {
 		DependentScreen.Navigate_to_DependentsDetails_Screen();
 		AddDependentScreen = new AddDependentDetails(browserObject);
 		AddDependentScreen.Add_New_Dependent(FirstName, LastName, Relationship, Age, Gender, Eligible, EligibleReason, ProofDate);
-		assertTrue(DependentScreen.Verify_Dependent_Added_Successfully(FirstName, LastName, Gender, Relationship));
+		assertTrue(DependentScreen.Verify_Dependent_Added_Successfully(FirstName));
 	}
 	
 	@AfterMethod
