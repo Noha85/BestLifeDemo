@@ -11,10 +11,11 @@ import java.util.Date;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
-import com.utility.Locators_Repo;
+import com.utility.AddRateVersionLocators;
 
 
-public class AddRateVersion extends Locators_Repo {
+
+public class AddRateVersion extends AddRateVersionLocators {
 	
 
 

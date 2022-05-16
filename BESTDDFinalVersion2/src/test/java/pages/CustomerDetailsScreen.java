@@ -11,12 +11,12 @@ import java.util.Date;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
-
-import com.utility.Locators_Repo;
-
+import com.utility.CustomerDetailsScreenLocators;
 
 
-public class CustomerDetailsScreen extends Locators_Repo{
+
+
+public class CustomerDetailsScreen extends CustomerDetailsScreenLocators{
 	
 
 	

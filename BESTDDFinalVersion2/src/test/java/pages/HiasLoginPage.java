@@ -6,10 +6,10 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 
-import com.utility.Locators_Repo;
+import com.utility.HiasMenuLocators;
 
 
-public class HiasLoginPage extends Locators_Repo{
+public class HiasLoginPage extends HiasMenuLocators{
 	
 
 	public HiasLoginPage(WebDriver browserObject)

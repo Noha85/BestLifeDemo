@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import com.utility.ExcelLib;
 
 import pages.AddLifePrimaryMemberDetails;
-import pages.AddPrimaryMemberDetails;
+
 import pages.CustomerDetailsScreen;
 import pages.CustomerMenu;
 import pages.HiasLoginPage;

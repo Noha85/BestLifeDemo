@@ -10,9 +10,9 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.utility.Locators_Repo;
+import com.utility.HiasMenuLocators;
 
-public class LDRateManagement extends Locators_Repo{
+public class LDRateManagement extends HiasMenuLocators{
 	
 
 	public LDRateManagement(WebDriver browserObject) {

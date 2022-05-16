@@ -3,10 +3,12 @@ package pages;
 
 import java.io.IOException;
 import org.openqa.selenium.WebDriver;
-import com.utility.Locators_Repo;
+
+import com.utility.LifeCustomerPageLocators;
 
 
-public class CreatNewLifeCustomer extends Locators_Repo {
+
+public class CreatNewLifeCustomer extends LifeCustomerPageLocators {
 
 
 
