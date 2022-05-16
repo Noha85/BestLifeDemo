@@ -11,10 +11,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.utility.Locators_Repo;
+
+import com.utility.PlanRateScreenLocators;
 
 
-public class PlanRateScreen extends Locators_Repo{
+public class PlanRateScreen extends PlanRateScreenLocators{
 	
 	
 	public PlanRateScreen(WebDriver browserObject) {
