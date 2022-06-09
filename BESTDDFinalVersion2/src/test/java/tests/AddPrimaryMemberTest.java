@@ -6,7 +6,7 @@ import com.utility.ExcelLib;
 
 import pages.AddLifePrimaryMemberDetails;
 import pages.CustomerDetailsScreen;
-import pages.CustomerMenu;
+import pages.HiasMenu;
 import pages.HiasLoginPage;
 import pages.PrimaryMemberMenu;
 
@@ -32,7 +32,7 @@ public class AddPrimaryMemberTest {
 	
 	WebDriver browserObject ;
 	HiasLoginPage HIASLOGIN;
-	CustomerMenu CMenu ;
+	HiasMenu Menu ;
 	CustomerDetailsScreen CustDetailsScreen ;
 	PrimaryMemberMenu PMScreen ;
 	AddLifePrimaryMemberDetails PMDScreen ;
@@ -63,8 +63,8 @@ public class AddPrimaryMemberTest {
 		  HIASLOGIN = new HiasLoginPage(browserObject);
 		  HIASLOGIN.Login(username , password);	  
 			  
-		  CMenu = new CustomerMenu(browserObject);
-		  CMenu.navigatetoCustomerScreen();
+		  Menu = new HiasMenu(browserObject);
+		  Menu.navigatetoCustomerScreen();
 		  CustDetailsScreen = new CustomerDetailsScreen(browserObject);
 		  CustDetailsScreen.search(CustomerNum);
 			try {
@@ -74,15 +74,17 @@ public class AddPrimaryMemberTest {
 				e.printStackTrace();
 				}
 			
-			PMScreen = new PrimaryMemberMenu(browserObject);
-			PMScreen.Nav_PrimaryMemberDetailsScreen();
+			//PMScreen = new PrimaryMemberMenu(browserObject);
+			//PMScreen.Nav_PrimaryMemberDetailsScreen();
+			Menu.Nav_PrimaryMemberDetailsScreen();
 			try {
 				Thread.sleep(3000);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			PMScreen.navigatetoPrimaryMemberDetailsScreen_Menu();
+			//PMScreen.navigatetoPrimaryMemberDetailsScreen_Menu();
+			Menu.navigatetoPrimaryMemberDetailsScreen_Menu();
 			try {
 				Thread.sleep(2000);
 			} catch (InterruptedException e) {

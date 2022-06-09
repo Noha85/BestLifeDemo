@@ -13,7 +13,7 @@ import com.utility.ExcelLib;
 import pages.AddDependentDetails;
 import pages.AddPrimaryMemberDetails;
 import pages.CustomerDetailsScreen;
-import pages.CustomerMenu;
+import pages.HiasMenu;
 import pages.DependentsScreen;
 import pages.HiasLoginPage;
 import pages.PrimaryMemberMenu;
@@ -23,7 +23,7 @@ public class AddDependentTest {
 	
 	WebDriver browserObject;
 	HiasLoginPage HIASLOGIN;
-	CustomerMenu CMenu ;
+	HiasMenu Menu ;
 	CustomerDetailsScreen CustDetailsScreen ;
 	PrimaryMemberMenu PMScreenMenu ;
 	PrimaryMembersScreen PMScreen;
@@ -46,12 +46,14 @@ public class AddDependentTest {
 			String Relationship, String Age, String Gender, String Eligible, String EligibleReason, String ProofDate) throws InterruptedException 
 	{
 		HIASLOGIN.Login(username, password);
-		CMenu = new CustomerMenu(browserObject);
-		CMenu.navigatetoCustomerScreen();
+		Menu = new HiasMenu(browserObject);
+		Menu.navigatetoCustomerScreen();
 		CustDetailsScreen = new CustomerDetailsScreen(browserObject);
 		CustDetailsScreen.search(CustomerNum);
-		PMScreenMenu = new PrimaryMemberMenu(browserObject);
-		PMScreenMenu.Nav_PrimaryMemberDetailsScreen();
+		//PMScreenMenu = new PrimaryMemberMenu(browserObject);
+		//PMScreenMenu.Nav_PrimaryMemberDetailsScreen();
+		HiasMenu Menu = new HiasMenu(browserObject);
+		Menu.Nav_PrimaryMemberDetailsScreen();
 		PMScreen = new PrimaryMembersScreen(browserObject);
 		PMScreen.search(PMemberNum);
 		PMScreen.selectPrimaryMember();

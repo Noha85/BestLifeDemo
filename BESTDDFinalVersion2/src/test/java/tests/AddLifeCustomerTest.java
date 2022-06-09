@@ -3,7 +3,7 @@ package tests;
 import org.testng.annotations.Test;
 import com.utility.ExcelLib;
 import pages.CreatNewLifeCustomer;
-import pages.CustomerMenu;
+import pages.HiasMenu;
 import pages.HiasLoginPage;
 import org.testng.annotations.BeforeMethod;
 import java.io.File;
@@ -25,7 +25,7 @@ public class AddLifeCustomerTest {
 	
 	WebDriver browserObject ;
 	HiasLoginPage HIASLOGIN;
-	CustomerMenu CMenu ;
+	HiasMenu CMenu ;
 	CreatNewLifeCustomer CNLC ; 
 	
 
@@ -48,7 +48,7 @@ public class AddLifeCustomerTest {
 	  HIASLOGIN = new HiasLoginPage(browserObject);
 	  HIASLOGIN.Login(username , password);	  
 		  
-	  CMenu = new CustomerMenu(browserObject);
+	  CMenu = new HiasMenu(browserObject);
 	  CMenu.navigatetoCustomerScreen();
 	  
 	  CNLC = new CreatNewLifeCustomer(browserObject);
