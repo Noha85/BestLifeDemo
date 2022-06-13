@@ -31,6 +31,15 @@ public class HiasMenuLocators {
 	public By Passwordpath = By.xpath("//input[@type='password']");
 	public By titlee = By.className("pagetitle");
 	
+	//QuotingManagement
+	public By Quoting = By.linkText("Quoting");
+	public By QuotingManagement = By.xpath("//a[@id='ctl00_uxMenu_ctl28_lnkMenu']");
+	public By QuotingCustomers = By.xpath("//a[@id='ctl00_uxMenu_ctl29_lnkMenu']");
+
+	public By QuotingManagement2 = By.xpath("//a[@id='ctl00_uxMenu_ctl28_uxLinkMenu']");
+	public By Quoting_GroupAgents2 = By.xpath("//a[@id='ctl00_uxMenu_ctl30_uxLinkMenu']");
+	
+	
 	
 
 

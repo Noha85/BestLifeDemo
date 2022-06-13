@@ -11,7 +11,7 @@ import com.utility.ExcelLib;
 
 import pages.AddPrimaryMemberDetails;
 import pages.CustomerDetailsScreen;
-import pages.CustomerMenu;
+import pages.HiasMenu;
 import pages.HiasLoginPage;
 import pages.PrimaryMemberMenu;
 
@@ -19,7 +19,7 @@ public class AddPrimaryMemberDetailsTest {
 	
 	WebDriver browserObject ;
 	HiasLoginPage HIASLOGIN;
-	CustomerMenu CMenu ;
+	HiasMenu Menu ;
 	CustomerDetailsScreen CustDetailsScreen ;
 	PrimaryMemberMenu PMScreen ;
 	AddPrimaryMemberDetails PMDPScreen ;
@@ -42,8 +42,8 @@ public class AddPrimaryMemberDetailsTest {
 		  HIASLOGIN = new HiasLoginPage(browserObject);
 		  HIASLOGIN.Login(UserName , Password);	  
 			  
-		  CMenu = new CustomerMenu(browserObject);
-		  CMenu.navigatetoCustomerScreen();
+		  Menu = new HiasMenu(browserObject);
+		  Menu.navigatetoCustomerScreen();
 		  CustDetailsScreen = new CustomerDetailsScreen(browserObject);
 		  try {
 				Thread.sleep(2000);
