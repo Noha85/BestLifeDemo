@@ -38,6 +38,7 @@ public class HiasMenuLocators {
 
 	public By QuotingManagement2 = By.xpath("//a[@id='ctl00_uxMenu_ctl28_uxLinkMenu']");
 	public By Quoting_GroupAgents2 = By.xpath("//a[@id='ctl00_uxMenu_ctl30_uxLinkMenu']");
+	public By Quoting_AgentsAssignment = By.xpath("//a[@id='ctl00_uxMenu_ctl31_uxLinkMenu']");
 	
 	
 	
