@@ -21,6 +21,7 @@ import pages.PrimaryMemberMenu;
 import pages.PrimaryMemberACHSetupScreen;
 
 public class AddPrimaryAchSetupTest {
+	//ACH
 	WebDriver browserObject ;
 	HiasLoginPage HIASLOGIN;
 	CustomerMenu CMenu ;

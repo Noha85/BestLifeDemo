@@ -27,7 +27,7 @@ import java.util.Locale;
 import java.util.Set;
 
 public class ACHAdHocScreen extends ACH_AdHocScreen_Locators {
-	
+	//Adhoc
 	String P_amt;
   public ACHAdHocScreen(WebDriver browserObject) {
 		
