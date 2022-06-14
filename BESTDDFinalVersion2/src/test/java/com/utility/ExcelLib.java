@@ -115,6 +115,21 @@ public class ExcelLib  {
 					"AddDependentAndCase");
 			return arrayObject;
 		}
+		@DataProvider(name = "PrimaryMemberAchSetup")
+		public static Object[][] PrimaryMemberAchSetup() throws IOException {
+			Object[][] arrayObject = getExcelData(
+					"D:\\git\\HIASAuto\\BESTDDFinalVersion2\\src\\test\\java\\testdata\\TestData.xlsx",
+					"PrimaryMemberAchSetup");
+			return arrayObject;
+		}
+		@DataProvider(name = "ACHAdHocSetup")
+		public static Object[][] ACHAdHocSetup() throws IOException {
+			Object[][] arrayObject = getExcelData(
+					"D:\\git\\HIASAuto\\BESTDDFinalVersion2\\src\\test\\java\\testdata\\TestData.xlsx",
+					"ACHAdHocSetup");
+			return arrayObject;
+		}
+
 /*	
 	//ConCat 2 or 3 data provider Function
 	@DataProvider(name = "objectCodes")
