@@ -115,7 +115,7 @@ public class ExcelLib  {
 					"AddDependentAndCase");
 			return arrayObject;
 		}
-		
+  		
 		@DataProvider(name = "Quoting")
 		public static Object[][] Quoting() throws IOException {
 			Object[][] arrayObject = getExcelData(
@@ -123,7 +123,6 @@ public class ExcelLib  {
 					"Quoting");
 			return arrayObject;
 		}
-		
 		@DataProvider(name = "PrimaryMemberAchSetup")
 		public static Object[][] PrimaryMemberAchSetup() throws IOException {
 			Object[][] arrayObject = getExcelData(
