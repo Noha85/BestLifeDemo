@@ -15,8 +15,8 @@ import com.utility.ExcelLib;
 
 import pages.AddPrimaryMemberDetails;
 import pages.CustomerDetailsScreen;
-import pages.CustomerMenu;
 import pages.HiasLoginPage;
+import pages.HiasMenu;
 import pages.PrimaryMemberMenu;
 import pages.PrimaryMemberACHSetupScreen;
 
@@ -24,7 +24,7 @@ public class AddPrimaryAchSetupTest {
 	//ACH
 	WebDriver browserObject ;
 	HiasLoginPage HIASLOGIN;
-	CustomerMenu CMenu ;
+	HiasMenu CMenu ;
 	CustomerDetailsScreen CustDetailsScreen ;
 	PrimaryMemberMenu PMScreen ;
 	AddPrimaryMemberDetails PMDPScreen ;
@@ -49,7 +49,7 @@ public class AddPrimaryAchSetupTest {
 		  HIASLOGIN = new HiasLoginPage(browserObject);
 		  HIASLOGIN.Login(UserName , Password);	  
 		  Thread.sleep(2000);
-		  CMenu = new CustomerMenu(browserObject);
+		  CMenu = new HiasMenu(browserObject);
 		  CMenu.navigatetoCustomerScreen();
 		  PMASScreen = new PrimaryMemberACHSetupScreen(browserObject);
 		  PMASScreen.search(PrimaryNum);

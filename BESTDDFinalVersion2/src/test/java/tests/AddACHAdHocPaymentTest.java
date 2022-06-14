@@ -16,15 +16,15 @@ import org.testng.annotations.Test;
 import com.utility.ExcelLib;
 
 
-import pages.CustomerMenu;
 import pages.HiasLoginPage;
+import pages.HiasMenu;
 import pages.ACHAdHocScreen;
 
 public class AddACHAdHocPaymentTest {
 	//Adhoc
 	WebDriver browserObject ;
 	HiasLoginPage HIASLOGIN;
-	CustomerMenu CMenu ;
+	HiasMenu CMenu ;
 	ACHAdHocScreen AADS;
 	
 	@BeforeMethod
@@ -43,7 +43,7 @@ public class AddACHAdHocPaymentTest {
 	 HIASLOGIN = new HiasLoginPage(browserObject);
 	  HIASLOGIN.Login(UserName , Password);	  
 	  Thread.sleep(2000);
-	  CMenu = new CustomerMenu(browserObject);
+	  CMenu = new HiasMenu(browserObject);
 	  CMenu.navigatetoCustomerScreen();
 	  AADS=new ACHAdHocScreen(browserObject);
 	  AADS.search(PrimaryNum);
