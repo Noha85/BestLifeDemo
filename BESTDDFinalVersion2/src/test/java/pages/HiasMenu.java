@@ -124,6 +124,26 @@ public class HiasMenu extends HiasMenuLocators  {
 		 WebDriverWait  wait = new WebDriverWait(browserObject, 10);
 		 wait.until(ExpectedConditions.titleContains("Customer Agents"));
 	}
+	
+	public void navigatetoQuotingAgentsAssignmentScreen() {
+		
+		 Actions Action = new Actions(browserObject);
+		WebElement element = (new WebDriverWait(browserObject, 50))
+				   .until(ExpectedConditions.elementToBeClickable(Quoting));
+		Action.moveToElement(element).build().perform();
+		
+		
+		WebElement element1 = browserObject.findElement(QuotingManagement2);
+		browserObject.manage().timeouts().implicitlyWait(50,TimeUnit.SECONDS) ;
+		Action.moveToElement(element1).build().perform();
+		
+		
+		 WebElement element2 = browserObject.findElement(Quoting_AgentsAssignment);
+		 browserObject.manage().timeouts().implicitlyWait(50,TimeUnit.SECONDS) ;
+		 element2.click();
+		 WebDriverWait  wait = new WebDriverWait(browserObject, 10);
+		 wait.until(ExpectedConditions.titleContains("Agents Assignment"));
+	}
 
 
 }
