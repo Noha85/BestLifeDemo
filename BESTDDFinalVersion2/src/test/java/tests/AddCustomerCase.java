@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import com.utility.ExcelLib;
 
 import pages.CustomerDetailsScreen;
-import pages.CustomerMenu;
+import pages.HiasMenu;
 import pages.HiasLoginPage;
 import pages.PlanRateScreen;
 import org.testng.annotations.BeforeMethod;
@@ -29,7 +29,7 @@ public class AddCustomerCase {
 
 	WebDriver browserObject ;
 	HiasLoginPage HIASLOGIN;
-	CustomerMenu CMenu ;
+	HiasMenu Menu ;
 	CustomerDetailsScreen CustDetailsScreen ;
 	PlanRateScreen PRScreen ;
 	String ActualResult = "Customer Agents";
@@ -54,8 +54,8 @@ public class AddCustomerCase {
 		  HIASLOGIN = new HiasLoginPage(browserObject);
 		  HIASLOGIN.Login(username , password);	  
 			  
-		  CMenu = new CustomerMenu(browserObject);
-		  CMenu.navigatetoCustomerScreen();
+		  Menu = new HiasMenu(browserObject);
+		  Menu.navigatetoCustomerScreen();
 		  CustDetailsScreen = new CustomerDetailsScreen(browserObject);
 		  CustDetailsScreen.search(CustomerNum);
 			try {

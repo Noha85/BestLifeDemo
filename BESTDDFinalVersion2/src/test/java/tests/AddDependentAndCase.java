@@ -14,7 +14,7 @@ import pages.AddDependentCoverageDetails;
 import pages.AddDependentDetails;
 import pages.AddPrimaryMemberDetails;
 import pages.CustomerDetailsScreen;
-import pages.CustomerMenu;
+import pages.HiasMenu;
 import pages.DependentCasesScreen;
 import pages.DependentsScreen;
 import pages.HiasLoginPage;
@@ -25,7 +25,7 @@ public class AddDependentAndCase {
 	
 	WebDriver browserObject;
 	HiasLoginPage HIASLOGIN;
-	CustomerMenu CMenu ;
+	HiasMenu Menu ;
 	CustomerDetailsScreen CustDetailsScreen ;
 	PrimaryMemberMenu PMScreenMenu ;
 	PrimaryMembersScreen PMScreen;
@@ -51,12 +51,13 @@ public class AddDependentAndCase {
 			String effDate,String WaitingPeriod, String majorEffDate, String EnrollmentReason) throws InterruptedException 
 	{
 		HIASLOGIN.Login(username, password);
-		CMenu = new CustomerMenu(browserObject);
-		CMenu.navigatetoCustomerScreen();
+		Menu = new HiasMenu(browserObject);
+		Menu.navigatetoCustomerScreen();
 		CustDetailsScreen = new CustomerDetailsScreen(browserObject);
 		CustDetailsScreen.search(CustomerNum);
-		PMScreenMenu = new PrimaryMemberMenu(browserObject);
-		PMScreenMenu.Nav_PrimaryMemberDetailsScreen();
+		//PMScreenMenu = new PrimaryMemberMenu(browserObject);
+		//PMScreenMenu.Nav_PrimaryMemberDetailsScreen();
+		Menu.Nav_PrimaryMemberDetailsScreen();
 		PMScreen = new PrimaryMembersScreen(browserObject);
 		PMScreen.search(PMemberNum);
 		PMScreen.selectPrimaryMember();

@@ -115,6 +115,14 @@ public class ExcelLib  {
 					"AddDependentAndCase");
 			return arrayObject;
 		}
+  		
+		@DataProvider(name = "Quoting")
+		public static Object[][] Quoting() throws IOException {
+			Object[][] arrayObject = getExcelData(
+					"D:\\git\\HIASAuto\\BESTDDFinalVersion2\\src\\test\\java\\testdata\\TestData.xlsx",
+					"Quoting");
+			return arrayObject;
+		}
 		@DataProvider(name = "PrimaryMemberAchSetup")
 		public static Object[][] PrimaryMemberAchSetup() throws IOException {
 			Object[][] arrayObject = getExcelData(
@@ -129,7 +137,6 @@ public class ExcelLib  {
 					"ACHAdHocSetup");
 			return arrayObject;
 		}
-
 /*	
 	//ConCat 2 or 3 data provider Function
 	@DataProvider(name = "objectCodes")

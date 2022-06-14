@@ -20,6 +20,7 @@ import org.testng.asserts.SoftAssert;
 import com.utility.ExcelLib;
 import pages.AddRateVersion;
 import pages.HiasLoginPage;
+import pages.HiasMenu;
 import pages.LDRateManagement;
 import pages.PlanRateScreen;
 
@@ -65,8 +66,10 @@ SoftAssert softAssert = new SoftAssert();
 		  Assert.assertEquals(ActualLoginMessage, "Home");
 
 		  
-		  LDmenu = new LDRateManagement(browserObject);
-		  LDmenu.navigattoLDRatePage();
+		 // LDmenu = new LDRateManagement(browserObject);
+		 // LDmenu.navigattoLDRatePage();
+		  HiasMenu Menu = new HiasMenu(browserObject);
+		  Menu.navigattoLDRatePage();
 		  
 		  PRScreen = new PlanRateScreen(browserObject);
 		  PRScreen.navigatetoplanratepage();

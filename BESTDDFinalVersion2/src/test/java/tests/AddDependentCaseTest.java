@@ -13,7 +13,7 @@ import com.utility.ExcelLib;
 import pages.AddDependentCoverageDetails;
 import pages.AddDependentDetails;
 import pages.CustomerDetailsScreen;
-import pages.CustomerMenu;
+import pages.HiasMenu;
 import pages.DependentCasesScreen;
 import pages.DependentsScreen;
 import pages.HiasLoginPage;
@@ -24,7 +24,7 @@ public class AddDependentCaseTest {
 	
 	WebDriver browserObject;
 	HiasLoginPage HIASLOGIN;
-	CustomerMenu CMenu ;
+	HiasMenu Menu ;
 	CustomerDetailsScreen CustDetailsScreen ;
 	PrimaryMemberMenu PMScreenMenu ;
 	PrimaryMembersScreen PMScreen;
@@ -48,12 +48,13 @@ public class AddDependentCaseTest {
 			String effDate,String WaitingPeriod, String majorEffDate, String EnrollmentReason) throws InterruptedException
 	{
 		HIASLOGIN.Login(username, password);
-		CMenu = new CustomerMenu(browserObject);
-		CMenu.navigatetoCustomerScreen();
+		Menu = new HiasMenu(browserObject);
+		Menu.navigatetoCustomerScreen();
 		CustDetailsScreen = new CustomerDetailsScreen(browserObject);
 		CustDetailsScreen.search(CustomerNum);
-		PMScreenMenu = new PrimaryMemberMenu(browserObject);
-		PMScreenMenu.Nav_PrimaryMemberDetailsScreen();
+		//PMScreenMenu = new PrimaryMemberMenu(browserObject);
+		//PMScreenMenu.Nav_PrimaryMemberDetailsScreen();
+		Menu.Nav_PrimaryMemberDetailsScreen();
 		PMScreen = new PrimaryMembersScreen(browserObject);
 		PMScreen.search(PMemberNum);
 		PMScreen.Navigate_to_Dependents_Screen();

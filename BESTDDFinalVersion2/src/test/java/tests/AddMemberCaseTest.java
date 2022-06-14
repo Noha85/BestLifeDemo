@@ -12,7 +12,7 @@ import com.utility.ExcelLib;
 import pages.AddLifePrimaryMemberDetails;
 
 import pages.CustomerDetailsScreen;
-import pages.CustomerMenu;
+import pages.HiasMenu;
 import pages.HiasLoginPage;
 import pages.PrimaryMemberMenu;
 
@@ -20,7 +20,7 @@ public class AddMemberCaseTest {
 	
 	WebDriver browserObject ;
 	HiasLoginPage HIASLOGIN;
-	CustomerMenu CMenu ;
+	HiasMenu Menu ;
 	CustomerDetailsScreen CustDetailsScreen ;
 	PrimaryMemberMenu PMScreen ;
 	AddLifePrimaryMemberDetails PMDScreen ;
@@ -51,8 +51,8 @@ public class AddMemberCaseTest {
 		  HIASLOGIN = new HiasLoginPage(browserObject);
 		  HIASLOGIN.Login(username , password);	  
 			  
-		  CMenu = new CustomerMenu(browserObject);
-		  CMenu.navigatetoCustomerScreen();
+		  Menu = new HiasMenu(browserObject);
+		  Menu.navigatetoCustomerScreen();
 		  CustDetailsScreen = new CustomerDetailsScreen(browserObject);
 		  CustDetailsScreen.search(CustomerNum);
 			try {
@@ -62,8 +62,10 @@ public class AddMemberCaseTest {
 				e.printStackTrace();
 				}
 			
-			PMScreen = new PrimaryMemberMenu(browserObject);
-			PMScreen.Nav_PrimaryMemberDetailsScreen();
+			//PMScreen = new PrimaryMemberMenu(browserObject);
+			//PMScreen.Nav_PrimaryMemberDetailsScreen();
+			HiasMenu Menu = new HiasMenu(browserObject);
+			Menu.Nav_PrimaryMemberDetailsScreen();
 			//PMScreen.navigatetoPrimaryMemberDetailsScreen_Menu();
 			try {
 				Thread.sleep(2000);
