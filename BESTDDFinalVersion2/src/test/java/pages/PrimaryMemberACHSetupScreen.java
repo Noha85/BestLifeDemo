@@ -22,7 +22,7 @@ import java.util.Set;
 
 
 public class PrimaryMemberACHSetupScreen extends PrimaryMemberACHSetupScreen_Locators{
-	//ACH
+	//ACH test
 	JavascriptExecutor executor;
 public PrimaryMemberACHSetupScreen(WebDriver browserObject) {
 		

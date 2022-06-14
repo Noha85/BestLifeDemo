@@ -21,7 +21,7 @@ import pages.HiasLoginPage;
 import pages.ACHAdHocScreen;
 
 public class AddACHAdHocPaymentTest {
-	//Adhoc
+	//Adhoc test
 	WebDriver browserObject ;
 	HiasLoginPage HIASLOGIN;
 	CustomerMenu CMenu ;

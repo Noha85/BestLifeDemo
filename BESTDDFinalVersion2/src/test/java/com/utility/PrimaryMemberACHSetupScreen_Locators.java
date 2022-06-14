@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class PrimaryMemberACHSetupScreen_Locators {
-	//ACH
+	//ACH test
 	public WebDriver browserObject ;
 	public By PrimaryNumber = By.id("ctl00_DefaultContent_uxPrimaryNumberField");
 	public By PrimaryNumSearch_btn = By.id("ctl00_DefaultContent_uxSearchCommand");
